@@ -2,7 +2,7 @@
    20 REM ****        by         ****
    30 REM ****    M.N.Buckwell   ****
    40 REM ****      (C) 1984     ****
-   45 VOL=1
+   45 TI%=20
    50 DIM Scores%(9),Names$(9),Space%(7,5),Bombs%(10,1),Alien0$(1),Alien1$(1),Alien2$(1), Ch% 3
    60 MODE 7:REM ON ERROR GOTO 3240
    70 VDU23,1,0;0;0;0;
@@ -77,11 +77,11 @@
   740 Score%=0:Base%=3
   750 Start%=0
   760 REPEAT:PROC_Setup_game
-  770   REPEAT: PROC_Key_Test: REM PROC_Update_Invaders:IF NOT finish THEN PROC_Bombs
-  771     *FX19
-  772     PROC_Update_Invaders
-  773     REMFOR JL = 1 TO 800 : NEXT 
-  774     IF NOT finish THEN PROC_Bombs
+  770   REPEAT: REM PROC_Key_Test: PROC_Update_Invaders:REM IF NOT finish THEN PROC_Bombs
+  771     TIME=0:REPEATUNTILTIME>TI%
+  773     PROC_Update_Invaders
+  774     PROC_Key_Test
+  775     IF NOT finish THEN PROC_Bombs
   780   UNTIL finish=TRUE:Start%=Start%+1
   790 UNTIL P%<>7:Base%=Base%-1
   800 IF Score%>Scores%(9) THEN PROC_Score
@@ -328,3 +328,4 @@
  3240 REM Error Routine
  3250 IF ERR=17GOTO440
  3260 REM REPAIRED VERSION
+ 
