@@ -9,3 +9,5 @@ Uses Console8 VDP firmware MODE7.
 MINEFIELD.BAS = Fully Working
 
 SUPERSTARTREK.BAS = Uses Console8 MODE7
+
+3DMAZE.BAS = Uses 1.04/2.0.0 Modes
