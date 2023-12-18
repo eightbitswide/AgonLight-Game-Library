@@ -8,10 +8,12 @@ Requires 1.04/2.0.0 Modes
 
 MINEFIELD.BAS = Fully Working
 
-SUPERSTARTREK.BAS = Requires 1.04/2.0.0 Modes
+SUPERSTARTREK.BAS = Requires 1.04/2.0.0+ Modes
 
-3DMAZE.BAS = Requires 1.04/2.0.0 Modes
+3DMAZE.BAS = Requires 1.04/2.0.0+ Modes
 
 ENCHANTED.BAS = Enchanted Castle Adventure
 
 FOXNHOUNDS.BAS = FOX AND HOUNDS
+
+FOURCOLORS.BAS = FOUR COLORS (MASTERMIND) Requires 1.04/2.0.0+ Modes
